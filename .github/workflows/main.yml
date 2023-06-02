@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '16'
           cache: 'npm'
-      - name: Build angular app
-        run: |
-          npm install
-          ng deploy
+      - name: Install dependencies
+        run: npm install
+      - name: Deploy app
+        run: ng deploy
