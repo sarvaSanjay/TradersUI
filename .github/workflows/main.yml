@@ -16,4 +16,6 @@ jobs:
           npm install
           npm install -g @angular/cli
       - name: Deploy app
-        run: ng deploy
+        run:  |
+          npm run build -- --prod
+          npm run deploy
