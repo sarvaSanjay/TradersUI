@@ -18,4 +18,7 @@ jobs:
       - name: Deploy app
         run:  |
           npm run build
-          npm run deploy
+      - name: Deploy to github pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npm run ng -- deploy --base-href=/TradersUI/ --name="${{ secrets.UNAME }}" --email=${{ secrets.EMAIL }}
