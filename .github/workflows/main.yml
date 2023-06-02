@@ -1,6 +1,9 @@
 on: push
 
-steps:
-  - name: Build angular app
-    run: |
-      ng deploy
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build angular app
+        run: |
+          ng deploy
