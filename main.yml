@@ -1,0 +1,8 @@
+trigger:
+- main
+
+steps:
+- script: 
+  failOnStdError: true
+    ng build --base-href  https://sarvasanjay.github.io/TradersUI --output-path ./docs
+  displayName: Build app
